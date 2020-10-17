@@ -9,3 +9,4 @@ Jatpack代码组件库
 - Room的使用，使用Room进行增删改查
 - Room数据库的升级之新增表
 - Room数据库的升级之新增字段列
+- WorkManager的基本使用

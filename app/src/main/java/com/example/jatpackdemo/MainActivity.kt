@@ -8,9 +8,13 @@ import android.util.Log
 import androidx.core.content.edit
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.work.OneTimeWorkRequest
+import androidx.work.WorkManager
 import com.example.jatpackdemo.lifecycle.MyObserver
 import com.example.jatpackdemo.model.*
+import com.example.jatpackdemo.workmanager.SimpleWorker
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.TimeUnit
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -54,6 +58,16 @@ class MainActivity : AppCompatActivity() {
 
         handleDatabase(userDao)
         handleBookDatabase(bookDao)
+        doWork()
+    }
+
+    private fun doWork() {
+        doWorkBtn.setOnClickListener {
+            val request = OneTimeWorkRequest.Builder(SimpleWorker::class.java)
+                .setInitialDelay(5, TimeUnit.MINUTES)
+                .build()
+            WorkManager.getInstance(this).enqueue(request)
+        }
     }
 
     private fun handleBookDatabase(bookDao: BookDao) {

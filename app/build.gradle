@@ -48,4 +48,6 @@ dependencies {
 
     implementation 'androidx.room:room-runtime:2.2.5'   // Room
     kapt 'androidx.room:room-compiler:2.2.5'    // 编译注解
+
+    implementation 'androidx.work:work-runtime:2.4.0'   // 后台周期任务
 }

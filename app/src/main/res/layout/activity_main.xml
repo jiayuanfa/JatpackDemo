@@ -22,7 +22,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/countTv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"
         android:text="Plus"
         />
@@ -112,5 +111,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:text="Query Book"
+        />
+
+    <Button
+        android:id="@+id/doWorkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/plusButton"
+        app:layout_constraintStart_toEndOf="@+id/plusButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="DoWork Button"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
