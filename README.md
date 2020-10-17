@@ -6,3 +6,6 @@ Jatpack代码组件库
 - Lifecycle组件的使用
 - LiveData
 - 更为安全的LiveData写法
+- Room的使用，使用Room进行增删改查
+- Room数据库的升级之新增表
+- Room数据库的升级之新增字段列
